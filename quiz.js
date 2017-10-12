@@ -131,7 +131,7 @@ jQuery(function($) {
       fasit.appendTo(content);
     });
 
-    content.scrollIntoView(true);
+    content[0].scrollIntoView(true);
   }
 
   function display_work(work, remaining_works, artists, all_works) {
@@ -154,7 +154,7 @@ jQuery(function($) {
         }
       });
     });
-    content.scrollIntoView(true);
+    content[0].scrollIntoView(true);
   }
 
   display_work(works.shift(), works, artists);
