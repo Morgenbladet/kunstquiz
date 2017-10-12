@@ -75,7 +75,7 @@ jQuery(function($) {
 
   function scrollTo(element) {
     var pos = element.position().top;
-    if ($("body,html").scrollTop() > pos)) {
+    if ($("body,html").scrollTop() > pos) {
       $("body,html").animate({
         scrollTop: element.position().top
       });
