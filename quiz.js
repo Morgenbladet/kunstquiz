@@ -101,7 +101,7 @@ jQuery(function($) {
       $("<img>",  { src: work["URL"] }).appendTo(fasit);
 
       var yourResponse = $("<p class='answer'></p>");
-      
+
       if (artist.data("response") == work["Kunstner"]) {
         $("<span class='check correct'>&#x2714; </span>").appendTo(yourResponse);
       } else {
@@ -131,6 +131,7 @@ jQuery(function($) {
       fasit.appendTo(content);
     });
 
+    content.scrollIntoView(true);
   }
 
   function display_work(work, remaining_works, artists, all_works) {
@@ -153,6 +154,7 @@ jQuery(function($) {
         }
       });
     });
+    content.scrollIntoView(true);
   }
 
   display_work(works.shift(), works, artists);
