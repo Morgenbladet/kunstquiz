@@ -74,9 +74,12 @@ jQuery(function($) {
   }
 
   function scrollTo(element) {
-    $("body,html").animate({
-      scrollTop: element.position().top
-    });
+    var pos = element.position().top;
+    if ($("body,html").scrollTop() > pos)) {
+      $("body,html").animate({
+        scrollTop: element.position().top
+      });
+    }
   }
 
   function display_results(artists, works) {
